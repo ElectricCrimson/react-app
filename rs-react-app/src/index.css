@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-base: #f1f3f8;
+  --color-base-dark: #d4dae6;
+  --color-btn: #a99afe;
+  --color-btn-hover: #7b68ee;
+  --color-text: #8f95a0;
+  --color-light: #fff;
+}
+
+.body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.3px;
+  background-color: var(--color-base);
+}

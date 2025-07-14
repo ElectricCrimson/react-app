@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from '../button/button';
+import { CardList } from '../cardList/cardList';
 import './main.css';
 
 export class Main extends Component {
@@ -7,7 +8,9 @@ export class Main extends Component {
     return (
       <>
         <main className="main">
-          <section className="cards"></section>
+          <section className="cards">
+            <CardList />
+          </section>
           <Button>Error Button</Button>
         </main>
       </>

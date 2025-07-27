@@ -29,3 +29,7 @@ export type TypeSlotProps = {
     url: string;
   };
 };
+
+export type ErrorBoundaryProps = {
+  children?: React.ReactNode;
+};

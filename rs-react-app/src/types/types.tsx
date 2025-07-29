@@ -17,7 +17,6 @@ export type CardDetailsProps = {
 };
 
 export type CardState = {
-  loading: boolean;
   error: string | null;
   pokemonDetails: CardDetailsProps | null;
 };
@@ -32,4 +31,13 @@ export type TypeSlotProps = {
 
 export type ErrorBoundaryProps = {
   children?: React.ReactNode;
+};
+
+export type PokemonProps = {
+  name: string;
+  url: string;
+};
+
+export type PokemonsArrProps = {
+  pokemons: PokemonProps[];
 };

@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
 import { Card } from '../card/card';
 import './cardList.css';
+import type { PokemonsArrProps } from '../../types/types';
 
-export class CardList extends Component {
-  state = {
-    pokemons: [],
-  };
-
-  componentDidMount(): void {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=15')
-      .then((response) => response.json())
-      .then((response) => this.setState({ pokemons: response.results }));
-  }
-
+export class CardList extends Component<PokemonsArrProps> {
   pokemonImageSrc(id: number): string {
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+    const imgUrl: string =
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
+    return `${imgUrl}${id}.png`;
   }
 
   render(): React.ReactNode {
     return (
       <div className="wrapper-list">
-        {this.state.pokemons.map(
+        {this.props.pokemons.map(
           (pokemon: { name: string; url: string }, index: number) => (
             <Card
               key={index}

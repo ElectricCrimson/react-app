@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Button } from '../button/button';
 import { CardList } from '../cardList/cardList';
 import './main.css';
+import type { PokemonsArrProps } from '../../types/types';
 
-export class Main extends Component {
+export class Main extends Component<PokemonsArrProps> {
   state = {
     hasError: false,
   };
@@ -21,7 +22,7 @@ export class Main extends Component {
       <>
         <main className="main">
           <section className="cards">
-            <CardList />
+            <CardList pokemons={this.props.pokemons} />
           </section>
           <Button onClick={() => this.throwError()}>Error Button</Button>
         </main>

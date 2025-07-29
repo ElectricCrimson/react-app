@@ -1,0 +1,41 @@
+@keyframes cycle {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.loading {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.loading-dot {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-image: url(/src/assets/pokeball.png);
+  background-size: cover;
+  animation: cycle 1s ease-in-out infinite;
+}
+
+.loading-dot:first-of-type {
+  animation-delay: 0;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dot:last-of-type {
+  animation-delay: 0.4s;
+}

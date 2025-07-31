@@ -1,0 +1,14 @@
+.header {
+  margin: 4rem 0 5rem 0;
+}
+
+.header,
+.wrapper-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-search {
+  gap: 2rem;
+}
